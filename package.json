@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Universal-Frontend is my personal JavaScript library created to enhance my web development experience and streamline project work. It includes functions I frequently use when crafting web application interfaces, such as animations, class management, event handling, and more.",
   "main": "index.js",
-  "private": "false",
+  "repository": "https://github.com/DmitryVolkov15/universal-frontend.git",
   "scripts": {
     "start": "webpack server --env mode=development",
     "build:prod": "webpack --env mode=production",
