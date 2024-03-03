@@ -1,0 +1,47 @@
+Обращение к методам идет через класс universal.
+
+Пример: let animate = new universal.scrollViewElementAnimation();
+
+
+АНИМАЦИЯ ПО СКРОЛУ
+///////////////////////////////////////////////////////////////////////////////////////
+Путь /observer/scrollViewElementAnimation.js
+
+Объект:  scrollViewElementAnimation
+Список методов bottomAnimation(),topAnimation(),rightAnimation(),leftAnimation(),opacityAnimation()
+
+принимает НЕ обязательные опции:
+{ targetElement, animationShift,opacity, viewElement, timeAnimate , track , warn}
+Классы по умолчанию: .slide-from-top, .slide-from-bottom, .slide-from-left, .slide-from-right, .opacity
+
+Пример использования
+const animation = new scrollViewElementAnimation();
+animation.bottomAnimation();
+
+Добавить класс: .bottom-animation на нужный элемент.(либо класс по выбору через опции)
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+ДОБАВЛЕНИЕ КЛАССА ПРИ ПРОКРУТКИ К ЭЛЕМЕНТУ
+///////////////////////////////////////////////////////////////////////////////////////
+
+Путь /observer/scrollViewAddClass.js
+
+Объект:  scrollViewAddClass
+Список методов addScrollViewClass()
+
+принимает НЕ обязательные опции:
+{ targetElement, activeClass, viewElement, timeAnimate, track , warn}
+
+Классы по умолчанию: .scroll-animate  добавляет .active-animate
+
+Пример использования
+const addClass = new scrollViewAddClass();
+addClass.addScrollViewClass();
+
+Добавить класс: .scroll-animate на нужный элемент.(либо класс по выбору через опции)
+
+///////////////////////////////////////////////////////////////////////////////////////

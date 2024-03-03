@@ -1,0 +1,6 @@
+.gitignore
+**/node_modules
+**/public
+**/src
+webpack.config.js
+info.txt
