@@ -15,6 +15,8 @@ Classes: scrollViewElementAnimation, ScrollViewAddClass
 ## Usage example
 
 ```javascript
+import universal from "universal-frontend";
+
 const animation = new universal.scrollViewElementAnimation();
 animation.bottomAnimation();
 ```
@@ -30,7 +32,7 @@ List of methods:
 - `slideFromTop()`
 - `slideFromRight()`
 - `slideFromLeft()`
-- `opacity()`
+- `opacityAnimate()`
 
 Accepts optional options:
 - `targetElement`

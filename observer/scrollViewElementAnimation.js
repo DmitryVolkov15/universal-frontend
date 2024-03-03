@@ -174,7 +174,7 @@ class ScrollViewElementAnimation {
     }
 
 
-    opacity() {
+    opacityAnimate() {
 
         let { targetElement, opacity, viewElement, timeAnimate, track, warn } = this;
 
