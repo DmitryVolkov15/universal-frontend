@@ -1,9 +1,10 @@
 import './index.html';
 import './index.scss';
 
-import universal from '../index';
+import { universalObserver } from '../index';
 
-let animate = new universal.ScrollViewElementAnimation({ track: true, timeAnimate: 5 })
+let animate = new universalObserver.ScrollViewElementAnimation({ track: true, timeAnimate: 5 });
+
 animate.slideFromLeft();
 animate.opacityAnimate();
 

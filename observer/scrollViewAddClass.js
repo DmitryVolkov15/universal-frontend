@@ -2,19 +2,26 @@
 
 class ScrollViewAddClass {
 
+    #targetElement;
+    #activeClass;
+    #viewElement;
+    #timeAnimate;
+    #track;
+    #warn;
+    #warns;
+
     constructor({ targetElement, activeClass, viewElement = 0, timeAnimate = 1, track = false, warn = false } = {}) {
-        this.targetElement = targetElement;
-        this.activeClass = activeClass;
-        this.viewElement = viewElement;
-        this.timeAnimate = timeAnimate;
-        this.track = track;
-        this.warn = warn;
-        this.warns = [];
+        this.#targetElement = targetElement;
+        this.#activeClass = activeClass;
+        this.#viewElement = viewElement;
+        this.#timeAnimate = timeAnimate;
+        this.#track = track;
+        this.#warn = warn;
+        this.#warns = [];
     }
 
     addClass() {
-
-        let { targetElement, activeClass, viewElement, timeAnimate, track, warn } = this;
+        let [targetElement, activeClass, viewElement, timeAnimate, track, warn] = [this.#targetElement, this.#activeClass, this.#viewElement, this.#timeAnimate, this.#track, this.#warn];
 
         //проверка элемент или присвоение
         targetElement = targetElement ?? 'scroll-animate';
@@ -24,10 +31,10 @@ class ScrollViewAddClass {
         let animateElements = document.querySelectorAll(`.${targetElement}`);
 
         //область видимости элемента для срабатывания
-        viewElement = this.viewElementMethod(viewElement, warn) ?? viewElement;
+        viewElement = this.#viewElementMethod(viewElement, warn) ?? viewElement;
 
         //добавление времени анимации
-        timeAnimate = this.timeAnimateMethod(timeAnimate, warn) ?? timeAnimate;
+        timeAnimate = this.#timeAnimateMethod(timeAnimate, warn) ?? timeAnimate;
 
         //наблюдатель за элементами
         const observer = new IntersectionObserver((entries, observer) => {
@@ -50,35 +57,35 @@ class ScrollViewAddClass {
             }
         } else {
             if (warn) {
-                this.warns.push('You fogot added class. Pass the class as the first parameter in scrollAppearAnimation.addClass((*)(2)(3)(4))');
-                this.displayWarn();
+                this.#warns.push('You fogot added class. Pass the class as the first parameter in scrollAppearAnimation.addClass((*)(2)(3)(4))');
+                this.#displayWarn();
             }
         }
     }
 
-    viewElementMethod(viewElement, warn) {
+    #viewElementMethod(viewElement, warn) {
         if (viewElement < 0 || viewElement > 1) {
             if (warn) {
-                this.warns.push('The value "viewElement" must be between 0 and 1');
-                this.displayWarn();
+                this.#warns.push('The value "viewElement" must be between 0 and 1');
+                this.#displayWarn();
             }
             return viewElement = 0.1;
         }
     }
 
-    timeAnimateMethod(timeAnimate, warn) {
+    #timeAnimateMethod(timeAnimate, warn) {
         if (timeAnimate < 0 || timeAnimate > 10) {
             if (warn) {
-                this.warns.push('The value "timeAnimate" must be between 0 and 10');
-                this.displayWarn();
+                this.#warns.push('The value "timeAnimate" must be between 0 and 10');
+                this.#displayWarn();
             }
             return timeAnimate = 1;
         }
     }
 
     //обработка пердупреждений
-    displayWarn() {
-        console.warn(this.warns.join('\n'));
+    #displayWarn() {
+        console.warn(this.#warns.join('\n'));
     }
 }
 

@@ -8,16 +8,16 @@ npm i universal-frontend
 ```
 
 ## Includes
-
-Global object - universal;
-Classes: scrollViewElementAnimation, ScrollViewAddClass
+1) universalObserver - Object  containing a set of classes to observe;
+   Classes: scrollViewElementAnimation, ScrollViewAddClass
+2) In developing: universalClick,universaDoubleClick,universalMouseMove,universalScroll,universalResize,universalForm etc.
 
 ## Usage example
 
 ```javascript
-import universal from "universal-frontend";
+import {universalObserve} from "universal-frontend";
 
-const animation = new universal.scrollViewElementAnimation();
+const animation = new universalObserver.scrollViewElementAnimation();
 animation.bottomAnimation();
 ```
 
@@ -25,7 +25,7 @@ animation.bottomAnimation();
 <div class="slide-from-bottom">Example</div>
 ```
 
-### Object: `universal.scrollViewElementAnimation`
+### Object: `universalObserver.scrollViewElementAnimation`
 
 List of methods:
 - `slideFromBottom()`
@@ -50,7 +50,7 @@ Default classes:
 - `.slide-from-right`
 - `.opacity`
 
-### Object: `universal.scrollViewAddClass`
+### Object: `universalObserver.scrollViewAddClass`
 
 List of methods:
 - `addClass()`
