@@ -15,7 +15,7 @@ npm i universal-frontend
 ## Usage example
 
 ```javascript
-import {universalObserve} from "universal-frontend";
+import {universalObserver} from "universal-frontend";
 
 const animation = new universalObserver.scrollViewElementAnimation();
 animation.bottomAnimation();
