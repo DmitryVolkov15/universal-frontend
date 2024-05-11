@@ -68,8 +68,6 @@ class ScrollViewElementAnimation {
         targetElement = targetElement ?? 'slide-from-bottom';
         animationShift = animationShift ?? 75;
 
-        console.log(this)
-
         //обращаемся к элементам
         let animateElements = document.querySelectorAll(`.${targetElement}`);
 

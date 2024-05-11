@@ -17,7 +17,7 @@ npm i universal-frontend
 ```javascript
 import {universalObserver} from "universal-frontend";
 
-const animation = new universalObserver.scrollViewElementAnimation();
+const animation = new universal.universalObserver.scrollViewElementAnimation();
 animation.bottomAnimation();
 ```
 
@@ -25,7 +25,7 @@ animation.bottomAnimation();
 <div class="slide-from-bottom">Example</div>
 ```
 
-### Object: `universalObserver.scrollViewElementAnimation`
+### Object: `universal.universalObserver.scrollViewElementAnimation`
 
 List of methods:
 - `slideFromBottom()`
@@ -50,7 +50,7 @@ Default classes:
 - `.slide-from-right`
 - `.opacity`
 
-### Object: `universalObserver.scrollViewAddClass`
+### Object: `universal.universalObserver.scrollViewAddClass`
 
 List of methods:
 - `addClass()`
@@ -64,7 +64,7 @@ Accepts optional options:
 - `warn`
 
 Default classes:
-- `.scroll-animate`
-- `.active-animate`
+- `.scroll-add`
+- `.active`
 
 

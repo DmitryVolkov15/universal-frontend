@@ -24,8 +24,8 @@ class ScrollViewAddClass {
         let [targetElement, activeClass, viewElement, timeAnimate, track, warn] = [this.#targetElement, this.#activeClass, this.#viewElement, this.#timeAnimate, this.#track, this.#warn];
 
         //проверка элемент или присвоение
-        targetElement = targetElement ?? 'scroll-animate';
-        activeClass = activeClass ?? 'active-animate';
+        targetElement = targetElement ?? 'scroll-add';
+        activeClass = activeClass ?? 'active';
 
         //обращаемся к элементам
         let animateElements = document.querySelectorAll(`.${targetElement}`);

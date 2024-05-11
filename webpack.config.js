@@ -42,7 +42,7 @@ module.exports = (env) => {
             ],
         },
         devServer: {
-            port: 3000,
+            port: 8000,
             open: true,
             static: path.join(__dirname, 'src'),
         },

@@ -1,39 +1,41 @@
-
 import ScrollViewElementAnimation from "./observer/scrollViewElementAnimation";
 import ScrollViewAddClass from "./observer/scrollViewAddClass";
 
+import ClickAddClass from "./click/clickAddClass";
 
-const universalObserver = {
-    ScrollViewElementAnimation: ScrollViewElementAnimation,
-    ScrollViewAddClass: ScrollViewAddClass,
+const universal = {
+    universalObserver: {
+        ScrollViewElementAnimation: ScrollViewElementAnimation,
+        ScrollViewAddClass: ScrollViewAddClass,
+    },
+
+    //as an options
+    universalClick: {
+        ClickAddClass: ClickAddClass,
+    },
+
+    universaDoubleClick: {
+        // in developing
+    },
+
+    universalMouseMove: {
+        // in developing
+    },
+
+    universalScroll: {
+        // in developing
+    },
+
+    universalResize: {
+        // in developing
+    },
+
+    universalForm: {
+        // in developing
+    },
 }
 
-//as an options
-const universalClick = {
-    // in developing
-}
-
-const universaDoubleClick = {
-    // in developing
-}
-
-const universalMouseMove = {
-    // in developing
-}
-
-const universalScroll = {
-    // in developing
-}
-
-const universalResize = {
-    // in developing
-}
-
-const universalForm = {
-    // in developing
-}
 
 
 
-
-export { universalObserver };
+export default universal;
