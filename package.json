@@ -1,6 +1,6 @@
 {
   "name": "universal-frontend",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Universal-Frontend is my personal JavaScript library created to enhance my web development experience and streamline project work. It includes functions I frequently use when crafting web application interfaces, such as animations, class management, event handling, and more.",
   "main": "index.js",
   "repository": "https://github.com/DmitryVolkov15/universal-frontend.git",
